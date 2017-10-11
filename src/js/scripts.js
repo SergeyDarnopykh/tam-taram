@@ -7,11 +7,11 @@ if ($(window).width() <= phone) {
         headerTop = document.querySelector('.header__top'),
         headerBottom = document.querySelector('.header__bottom');
 
-    headerTop.removeChild(address);
+    //headerTop.removeChild(address);
     headerTop.removeChild(search);
     headerBottom.removeChild(menu);
-    headerTop.insertBefore(menu, headerTop.firstElementChild);
-    headerBottom.appendChild(address);
-    headerBottom.appendChild(search);
+    //headerTop.insertBefore(menu, headerTop.firstElementChild);
+    //headerBottom.appendChild(address);
+    //headerBottom.appendChild(search);
 }
 
