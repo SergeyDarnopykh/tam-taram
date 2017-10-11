@@ -1,0 +1,32 @@
+@import 'media';
+
+.header {
+    background-color: #5b1dcd;
+
+    &__top {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__address {
+        width: 5%;
+    }
+
+    &__logo {
+        width: 72%;
+
+        @media @tablet {
+            width: 44%;
+        }
+
+        @media @desktop {
+            width: 24%;
+        }
+        display: flex;
+        margin: .5% auto;
+    }
+
+    &__search {
+        width: 50px;
+    }
+}
