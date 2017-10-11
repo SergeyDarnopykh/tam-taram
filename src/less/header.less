@@ -3,10 +3,6 @@
 .header {
     background-color: #5b1dcd;
 
-    @media @phone-strict {
-        background-color: #6916d2;
-    }
-
     &__top {
         display: flex;
         flex-direction: row;
@@ -15,55 +11,47 @@
 
         @media @tablet {
             justify-content: space-between;
-            margin: 2.4% 0;
+            margin: 2.4% 3.7%;
         }
 
         @media @desktop {
-            margin: .8% 0;
+            margin: .8% 5%;
+        }
+    }
+
+    &__bottom {
+        @media @phone-strict {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background-color: #262626;
         }
     }
 
     &__dropdown {
-        width: 15px;
-        height: 15px;
+        margin-top: 12px;
+        width: 10px;
+        height: 10px;
     }
 
     &__address {
-        margin: 0 4% 0 0;
         color: white;
 
-        @media @tablet {
-           margin-left: 3.7%;
-        }
-
-        @media @desktop {
-            margin-left: 2.7%;
+        @media @phone-strict {
+            margin: 3% 0 3% 5%;
         }
     }
 
     &__logo {
         width: 72%;
-
-        @media @tablet {
-            width: 44%;
-        }
-
-        @media @desktop {
-            width: 24%;
-        }
     }
 
     &__search {
         width: 25px;
         height: 25px;
-        margin: 0 6.3%;
 
-        @media @tablet {
-            margin: 0 3.7%;
-        }
-
-        @media @desktop {
-            margin: 0 2.7% 0 5.4%;
+        @media @phone-strict {
+            margin: 3% 5% 3% 0;
         }
     }
 }

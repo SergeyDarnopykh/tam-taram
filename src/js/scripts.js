@@ -11,7 +11,7 @@ if ($(window).width() <= phone) {
     headerTop.removeChild(search);
     headerBottom.removeChild(menu);
     //headerTop.insertBefore(menu, headerTop.firstElementChild);
-    //headerBottom.appendChild(address);
-    //headerBottom.appendChild(search);
+    headerBottom.appendChild(address);
+    headerBottom.appendChild(search);
 }
 
