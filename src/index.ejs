@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="css/page.css">
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/where-to-find.css">
+    <link rel="stylesheet" href="css/hamburger.css">
 </head>
 <body class="page">
 
@@ -27,15 +29,22 @@
     {title: 'Professional', link: '#'}
 ]; %>
 
+
 <header class="header">
     <div class="header__top">
-        <!--<p class="address header__address" >Nearest salon-->
-            <!--<img class="dropdown header__dropdown" src="img/ico_dropdown.svg"><br>-->
-            <!--Plush Salon 92101</p>-->
-        <img class="address header__address" src="img/menu.png">
+        <p class="where-to-find header__where-to-find">
+            <span class="where-to-find_big">Nearest salon</span>
+            <img class="where-to-find_small" src="img/ico_dropdown.svg">
+            <span class="where-to-find_second-row">Plush Salon 92101</span></p>
+        <div class="hamburger header__hamburger">
+            <% for (let i = 0; i < 3; i++) { %>
+            <li class="hamburger__item"></li>
+            <% }%>
+        </div>
         <img class="logo header__logo" src="img/logo.svg">
         <img class="search header__search" src="img/ico_search.svg">
     </div>
+
     <div class="header__bottom">
         <div class="menu header__menu">
             <% menuItems.forEach((item) => { %>
@@ -44,17 +53,6 @@
         </div>
     </div>
 </header>
-
-
-<!--Example-->
-<!--<img src="img/pic.png" alt="">-->
-<!--<footer class="footer">-->
-    <!--<div class="menu menu_bottom footer__menu">-->
-        <!--<% menuItems.forEach((item) => { %>-->
-        <!--<li class="menu__item"><a class="menu__link" href="<%= item.link; %>"><%= item.title %></a></li>-->
-        <!--<% }) %>-->
-    <!--</div>-->
-<!--</footer>-->
 
 <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js"></script>

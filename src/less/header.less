@@ -3,11 +3,15 @@
 .header {
     background-color: #5b1dcd;
 
+    @media @phone-strict {
+        background-color: #6917d2;
+    }
+
     &__top {
         display: flex;
         flex-direction: row;
         justify-content: center;
-        margin: 5% 0;
+        margin: 6% 0;
 
         @media @tablet {
             justify-content: space-between;
@@ -15,7 +19,7 @@
         }
 
         @media @desktop {
-            margin: .8% 5%;
+            margin: .8% 2.7%;
         }
     }
 
@@ -28,22 +32,16 @@
         }
     }
 
-    &__dropdown {
-        margin-top: 12px;
-        width: 10px;
-        height: 10px;
-    }
-
-    &__address {
-        color: white;
-
-        @media @phone-strict {
-            margin: 3% 0 3% 5%;
-        }
-    }
-
     &__logo {
         width: 72%;
+
+        @media @tablet {
+            margin-right: 10%;
+        }
+
+        @media @desktop {
+            margin-right: 10%;
+        }
     }
 
     &__search {

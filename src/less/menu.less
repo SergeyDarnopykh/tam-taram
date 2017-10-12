@@ -12,10 +12,17 @@
     }
 
     &__item {
+        display: inline-block;
         list-style-type: none;
         text-transform: uppercase;
         font-variant: small-caps;
-        margin: .5% 1.7%;
+        padding: .5% 1.7%;
+        white-space: nowrap;
+
+        &:hover {
+            background-color: darken(@backgroundColor, 10%);
+            enable-background: true;
+        }
     }
 
     &__link {
@@ -23,10 +30,5 @@
         text-decoration: none;
         font-size: 12px;
         opacity: .8;
-
-        &:hover {
-            border-radius: 1%;
-            border-color: darken(@backgroundColor, 10%);
-        }
     }
 }
