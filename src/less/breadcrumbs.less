@@ -1,10 +1,11 @@
-@import 'media';
+@import 'global';
 
 .breadcrumbs {
-    font-family: 'PT Sans', sans-serif;
+    font-family: @pt-sans;
     text-transform: uppercase;
 
-    &_full {
+    &__list {
+        .flexRow;
         color: fadeout(black, 40%);
 
         font-size: 13px;
@@ -19,24 +20,30 @@
         }
     }
 
-    &_short {
-        font-size: 30px;
-        color: black;
-        font-weight: 900;
-        margin: 9% 0 0 3.25%;
-
-        @media @tablet {
-            font-size: 55px;
-            margin: 3% 0 0 6.9%;
-        }
-
-        @media @desktop {
-            font-size: 75px;
-            margin: 3% 0 1% 19.5%;
-        }
+    &__link {
+        display: inline;
     }
 }
 
 .item_red {
     color: red;
+}
+
+.page-title {
+    font-family: @pt-sans;
+    text-transform: uppercase;
+    font-size: 30px;
+    color: black;
+    font-weight: 900;
+    margin: 9% 0 0 3.25%;
+
+    @media @tablet {
+        font-size: 55px;
+        margin: 3% 0 0 6.9%;
+    }
+
+    @media @desktop {
+        font-size: 75px;
+        margin: 3% 0 1% 19.5%;
+    }
 }
