@@ -1,0 +1,15 @@
+/* # Setup devices width */
+/* # Variables for mobile first approach and strict ranges */
+.videos {
+  margin-left: 3.25%;
+}
+@media only screen and (min-width: 768px) {
+  .videos {
+    margin-left: 6.9%;
+  }
+}
+@media only screen and (min-width: 1092px) {
+  .videos {
+    margin-left: 19.5%;
+  }
+}

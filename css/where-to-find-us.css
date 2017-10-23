@@ -1,0 +1,68 @@
+/* # Setup devices width */
+/* # Variables for mobile first approach and strict ranges */
+.flexRow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.flexColumn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.where-to-find-us {
+  color: white;
+  font-family: 'PT Sans', sans-serif;
+}
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .where-to-find-us {
+    max-width: 110px;
+  }
+}
+.where-to-find-us_big {
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0 0 4.5px 0;
+}
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .where-to-find-us_big {
+    font-size: 12px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1091px) {
+  .where-to-find-us_big {
+    font-weight: normal;
+  }
+}
+.where-to-find-us_small {
+  width: 10px;
+  position: relative;
+}
+.where-to-find-us_second-row {
+  font-size: 13px;
+}
+@media only screen and (min-width: 768px) {
+  .where-to-find-us_second-row {
+    color: rgba(255, 255, 255, 0.9);
+  }
+}
+@media only screen and (min-width: 1092px) {
+  .where-to-find-us_second-row {
+    font-size: 14px;
+  }
+}
