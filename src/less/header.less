@@ -1,6 +1,5 @@
 @import 'global';
 
-
 .header {
     &__top {
         padding: 6% 7%;
@@ -34,26 +33,35 @@
             background-color: #262626;
         }
     }
+}
 
+.shop {
     &__logo {
         margin: auto;
+        display: flex;
 
-        @media @phone-strict {
-            width: 85%;
+        @media @phone {
+            width: 95%;
         }
 
         @media @tablet {
-            height: 80%;
+            height: 25px;
         }
     }
 
     &__search {
         justify-self: right;
-            width: 26px;
+        width: 26px;
 
         @media @tablet {
             width: 25px;
             height: 25px;
         }
+    }
+}
+
+.hamburger {
+    @media @phone-strict {
+        margin-right: 10px;
     }
 }
