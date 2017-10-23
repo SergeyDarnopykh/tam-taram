@@ -13,4 +13,5 @@ deploy:
   
   # safelist
   branches:
+    only:
     - dev
