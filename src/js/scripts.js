@@ -6,25 +6,43 @@ function isPhone() {
 }
 
 function isTablet() {
-    return ($(window).width() >= 768) && ($(window).width() <= 991);
+    return ($(window).width() >= 768) && ($(window).width() <= 1091);
+}
+
+// import {Media} from './Media.js';
+// const Media = require('./Media');
+
+function changeVisibility(elem) {
+    if (elem.classList.contains('hidden')) {
+        elem.classList.remove('hidden');
+    } else {
+        elem.className += ' hidden';
+    }
 }
 
 if (isPhone()) {
-    const whereToFind = document.querySelector('.where-to-find'),
-        menu = document.querySelector('.menu'),
-        search = document.querySelector('.search'),
-        headerTop = document.querySelector('.header__top'),
-        headerBottom = document.querySelector('.header__bottom');
+    const whereToFindUs = document.querySelector('#whereToFindUs'),
+        menu = document.querySelector('#menu'),
+        search = document.querySelector('#search'),
+        header = document.querySelector('#header'),
+        headerTop = document.querySelector('#headerTop'),
+        headerBottom = document.querySelector('#headerBottom'),
+        hamburger = document.querySelector('#hamburger');
 
-    headerTop.removeChild(whereToFind);
+    headerTop.removeChild(whereToFindUs);
     headerTop.removeChild(search);
     headerBottom.removeChild(menu);
-    //headerTop.insertBefore(menu, headerTop.firstElementChild);
-    headerBottom.appendChild(whereToFind);
+    header.insertBefore(menu, headerBottom);
+    headerBottom.appendChild(whereToFindUs);
     headerBottom.appendChild(search);
+
+
+    menu.className += ' hidden';
+    hamburger.classList.remove('hidden');
+    hamburger.onclick = function () { changeVisibility(menu); };
 }
 
 if (isTablet()) {
-    document.querySelector('.where-to-find_second-row').textContent = 'Chaltyr, 92101';
+    document.querySelector('#whereToFindUsSecondRow').textContent = 'Chaltyr, 92101';
 }
 

@@ -1,34 +1,46 @@
 @import 'media';
+@import 'global';
 
 .menu {
     @backgroundColor: #262626;
     background-color: @backgroundColor;
-    display: flex;
-    flex-direction: row;
+    .flexRow;
     justify-content: center;
 
     @media @phone-strict {
-        visibility: hidden;
+        padding: 1.5% 7%;
+        .flexColumn;
     }
 
     &__item {
-        display: inline-block;
         list-style-type: none;
         text-transform: uppercase;
-        font-variant: small-caps;
-        padding: .5% 1.7%;
         white-space: nowrap;
+        padding: 2%;
+        margin-right: auto;
 
-        &:hover {
-            background-color: darken(@backgroundColor, 10%);
-            enable-background: true;
+        @media @tablet {
+            padding: 2% 2.25%;
+
+            &:hover {
+                background-color: darken(@backgroundColor, 10%);
+                enable-background: true;
+            }
+        }
+
+        @media @desktop {
+            padding: .7% 2%;
         }
     }
 
     &__link {
-        color: white;
+        color: fadeout(white, 20%);
         text-decoration: none;
-        font-size: 12px;
-        opacity: .8;
+        font-family: 'PT Sans', sans-serif;
+        font-size: 25px;
+
+        @media @tablet {
+            font-size: 12px;
+        }
     }
 }

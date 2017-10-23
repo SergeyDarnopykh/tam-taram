@@ -1,0 +1,43 @@
+@import 'media';
+@import 'global';
+
+.where-to-find-us {
+    color: white;
+    font-family: 'PT Sans', sans-serif;
+
+    @media @phone-strict {
+        max-width: 110px;
+    }
+
+    &_big {
+        font-size: 12px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin: 0 0 4.5px 0;
+
+        @media @phone-strict {
+            font-size: 12px;
+        }
+
+        @media @tablet-strict {
+            font-weight: normal;
+        }
+    }
+
+    &_small {
+        width: 10px;
+        position: relative;
+    }
+
+    &_second-row {
+        font-size: 13px;
+
+        @media @tablet {
+            color: fadeout(white, 10%);
+        }
+
+        @media @desktop {
+            font-size: 14px;
+        }
+    }
+}

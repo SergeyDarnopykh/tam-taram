@@ -4,7 +4,7 @@ class Media {
     constructor() {
         this.xsMin = 320;
         this.smMin = 768;
-        this.mdMin = 992;
+        this.mdMin = 1092;
         this.lgMin = 1200;
 
         this.xsMax = this.smMin - 1;
@@ -25,4 +25,5 @@ class Media {
     }
 }
 
-module.exports = Media;
+// module.exports = Media;
+
